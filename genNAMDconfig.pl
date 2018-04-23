@@ -4,10 +4,10 @@ use strict;
 use FileHandle;
 use Data::Dumper;
 
-my ($simLength, $baseFile1, $baseFile2, $boundaryFile, $pdbFile, $psfFile, @parameterFiles) = @ARGV;
+my ($configName, $simLength, $baseFile1, $baseFile2, $boundaryFile, $pdbFile, $psfFile, @parameterFiles) = @ARGV;
 my $simName = $simLength/50000;
 
-my $CONFIG = FileHandle->new(">config.namd") or die("$!:config.namd");
+my $CONFIG = FileHandle->new(">$configName.namd") or die("$!:$configName.namd");
 
 
 print $CONFIG "structure          $psfFile\n";
