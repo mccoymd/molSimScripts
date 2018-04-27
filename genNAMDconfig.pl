@@ -12,7 +12,7 @@ my $CONFIG = FileHandle->new(">$configName.namd") or die("$!:$configName.namd");
 
 print $CONFIG "structure          $psfFile\n";
 print $CONFIG "coordinates        $pdbFile\n";
-print $CONFIG "set outputname     $simName","ns",".output\n\n";
+print $CONFIG "set outputname     $configName",".output\n\n";
 print $CONFIG "paraTypeCharmm    on\n";
 foreach my $parameter (@parameterFiles){
     print $CONFIG "parameters $parameter\n";
