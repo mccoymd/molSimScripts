@@ -1,0 +1,5 @@
+Start with PDB 5JDR
+chain B because chain A has some quality issues (per PDB record)
+
+run genPDL1input.5JDR.tcl to create "clean PDB" for input
+
