@@ -25,7 +25,7 @@ print $TCL "writepsf struct.psf\n";
 print $TCL "package require solvate\n";
 print $TCL "solvate struct.psf struct.pdb -t 10 -o struct.wb\n";
 print $TCL "package require autoionize\n";
-print $TCL "autoionize -psf struct.wb.psf -pdb struct.wb.pdb -neutralize -o $outputName\n";
+print $TCL "autoionize -psf struct.wb.psf -pdb struct.wb.pdb -neutralize -o NAMDinput\n";
 print $TCL "quit\n";
 		       
 			
