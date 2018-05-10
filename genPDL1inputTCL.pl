@@ -5,7 +5,7 @@ use FileHandle;
 use Data::Dumper;
 
 #input file name must end in ".pdb"
-my ($outputName,$inputFileName,@topologyFileNames) = @ARGV;
+my ($inputFileName,@topologyFileNames) = @ARGV;
 
 #my $inputFileBase = substr($inputFileName,0,index(".pdb",$inputFileName)-4);
 #print Dumper($inputFileBase);
