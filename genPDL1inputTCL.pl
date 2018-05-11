@@ -26,6 +26,11 @@ print $TCL "package require solvate\n";
 print $TCL "solvate struct.psf struct.pdb -t 10 -o struct.wb\n";
 print $TCL "package require autoionize\n";
 print $TCL "autoionize -psf struct.wb.psf -pdb struct.wb.pdb -neutralize -o NAMDinput\n";
+print $TCL "set box [atomselect top all]\n";
+print $TCL "set output [open \"boundary.txt\" w]\n";
+print $TCL "puts \$output [measure center \$box]\n";
+print $TCL "puts \$output [measure minmax \$box]\n";
+print $TCL "close \$output\n";
 print $TCL "quit\n";
 		       
 			
